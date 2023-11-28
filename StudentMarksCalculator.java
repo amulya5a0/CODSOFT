@@ -1,4 +1,4 @@
-mport java.util.*;
+import java.util.*;
 class StudentMarks{
     int n,i;
     float total,sum;
