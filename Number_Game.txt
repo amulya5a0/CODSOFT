@@ -79,3 +79,4 @@ class RoundResult {
         this.attempts = attempts;
         this.score = score;
     }
+}
