@@ -7,7 +7,7 @@ class Number_Game{
     public static void playGame() {
         Scanner sc = new Scanner(System.in);
         int maxRounds = 3; 
-        int maxAttempts = 5; 
+        int maxAttempts = 10; 
 
         int totalAttempts = 0;
         int totalRounds = 0;
@@ -18,11 +18,11 @@ class Number_Game{
 
             totalAttempts += result.attempts;
             totalRounds++;
-            totalScore += result.score;
+            totalScore += result.attempts;
 
             System.out.println("Round " + round + " completed");
             System.out.println("Attempts: " + result.attempts);
-            System.out.println("Score for this round: " + result.score);
+            System.out.println("Score for this round: " + result.attempts);
             System.out.println("Total Score: " + totalScore);
 
             if (round < maxRounds) {
@@ -61,7 +61,6 @@ class Number_Game{
                 System.out.println("Too high");
             } else {
                 System.out.println("Correct guess!");
-                System.out.println("Score for this round: " + (maxAttempts - count + 1)+" ");
                 return new RoundResult(count, maxAttempts - count + 1);
             }
         }
@@ -76,7 +75,7 @@ class RoundResult {
     int score;
 
     public RoundResult(int attempts, int score) {
-        this.attempts = attempts;
+         this.attempts = attempts;
         this.score = score;
     }
 }
